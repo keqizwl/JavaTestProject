@@ -40,5 +40,7 @@ public class CloneComprableTest {
 			System.out.println(myClass.a);
 		}
 	}
+	
+	
 
 }
