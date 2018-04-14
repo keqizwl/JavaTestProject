@@ -39,6 +39,7 @@ public class CloneComprableTest {
 		for(MyClass myClass : arr2) {
 			System.out.println(myClass.a);
 		}
+		Character a = new Character('a');
 	}
 	
 	
