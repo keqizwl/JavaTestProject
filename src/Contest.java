@@ -5,7 +5,11 @@ import java.util.Map;
 
 public class Contest {
 	// ".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."
-
+	private String name;
+	
+	public Contest() {
+		
+	}
 	public static void main(String[] args) {
 		int[] a = {49,50,14,37,66,89,66,80,17,10,2};
 		System.out.println(splitArraySameAverage(a));
@@ -22,6 +26,11 @@ public class Contest {
 			a[i] *= a.length;
 		}
 		return splitArraySameAverage(a, 0, 0, 0, 0, -1, sum);
+	}
+	
+	@Override
+	public String toString() {
+		return name;
 	}
 
 	/**
