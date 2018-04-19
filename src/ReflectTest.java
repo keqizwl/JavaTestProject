@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.ReflectPermission;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class ReflectTest {
@@ -12,6 +14,17 @@ public class ReflectTest {
 	
 	
 	public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+		list.add("string");
+		list.add("xxx");
+		
+		List list1 = list;
+		list1.add(1);
+		
+		for(Object o : list) {
+			System.out.println(o.toString());
+		}
+		
 		Properties properties = getProperties();
 		
 		String className = properties.getProperty("class_name");
