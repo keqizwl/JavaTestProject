@@ -1,7 +1,19 @@
+import java.io.IOException;
 
 public class Test1 {
 
 	public static void main(String[] args) {
+		try {
+			Runtime.getRuntime().exec("cd");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(Runtime.getRuntime().availableProcessors());
+		
+		
+		
+		
 		Thread thread  = new Thread(new Runnable() {
 			ThreadLocal<MyClass> myLocal = new ThreadLocal<MyClass>() {
 				@Override
